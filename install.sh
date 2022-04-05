@@ -43,6 +43,9 @@ cd polybar/build
 cmake ..
 make -j$(nproc)
 sudo make install
+cd ..
+cd ..
+rm -rf "polybar"
 echo "Done"
 
 echo "Cleaning up post install"

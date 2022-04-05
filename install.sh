@@ -44,14 +44,14 @@ make -j$(nproc)
 sudo make install
 echo "Done"
 
-echo "Install i3-gaps... again..."
-sudo apt install -y i3-gaps
-echo "Done"
-
-echo "Installing neovim plugins"
+echo "Cleaning up post install"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerInstall'
+sudo apt install -y i3-gaps
+sudo apt remove -y build-essential cmake cmake-data pkg-config python3-sphinx python3-packaging libuv1-dev libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python3-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev i3-wm libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev
+echo "Done"
+
 echo "Done"
 
 echo "Import script finished"
+echo "Run nvim and perform :PackerInstall"

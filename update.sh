@@ -23,7 +23,7 @@ cp "$HOME/tmux.conf" "$git_path/tmux.conf"
 
 # rofi
 cpdir "$HOME/.config/rofi" "$git_path/.config"
-cpdir "$HOME/.local/share/rofi" "$git_path/.local/share/rofi"
+cpdir "$HOME/.local/share/rofi" "$git_path/.local/share/"
 
 # polybar
 cpdir "$HOME/.config/polybar" "$git_path/.config"

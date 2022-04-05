@@ -4,7 +4,7 @@ cpdir() {
     mkdir -p "$(dirname "$2")" && cp -r "$1" "$2"
 }
 
-git_path="$HOME/git"
+git_path="$HOME/git/dots"
 
 echo "Copying files to git directory"
 

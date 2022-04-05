@@ -187,7 +187,7 @@ for_window [class=".*"] border pixel 0
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # picom
-exec_always --no-startup-id picom
+exec_always --no-startup-id picom --experimental-backends
 
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Pictures/metroid.jpg

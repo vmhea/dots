@@ -6,6 +6,8 @@ cpdir() {
 
 apps="neovim alacritty i3-gaps feh rofi picom"
 
+echo "Import script started"
+
 echo "Adding required apt repositories"
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo add-apt-repository -y ppa:aslatter/ppa
@@ -41,3 +43,9 @@ cmake ..
 make -j$(nproc)
 sudo make install
 echo "Done"
+
+echo "Installing neovim plugins"
+nvim --headless +PlugInstall +qa
+echo "Done"
+
+echo "Import script finished"

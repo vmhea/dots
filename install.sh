@@ -20,18 +20,18 @@ sudo apt-get install -y $apps
 echo "Done"
 
 echo "Copying files to $HOME"
-cpdir ".local" "$HOME/.local"
-cpdir ".config" "$HOME/.config"
-cp "tmux.conf" "$HOME/tmux.conf"
+cpdir ".local" "$HOME"
+cpdir ".config" "$HOME"
+cp "tmux.conf" "$HOME"
 echo "Done"
 
 echo "Downloading and copying JetBrains Mono to .fonts"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 mkdir ".fonts"
 unzip JetBrainsMono.zip -x "*Windows*" -d ".fonts"
-cpdir ".fonts" "$HOME/.fonts"
+cpdir ".fonts" "$HOME"
 fc-cache -fv
-rm "JetBrainsMono.zip" && rm ".fonts"
+rm "JetBrainsMono.zip" && rm -rf ".fonts"
 echo "Done"
 
 echo "Downloading and compiling polybar"

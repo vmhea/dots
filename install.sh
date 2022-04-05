@@ -25,13 +25,13 @@ cpdir ".config" "$HOME"
 cp "tmux.conf" "$HOME"
 echo "Done"
 
-echo "Downloading and copying JetBrains Mono to .fonts"
+echo "Downloading and copying JetBrains Mono to $HOME/.local/share/fonts"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-mkdir ".fonts"
-unzip JetBrainsMono.zip -x "*Windows*" -d ".fonts"
-cpdir ".fonts" "$HOME"
-fc-cache -fv
-rm "JetBrainsMono.zip" && rm -rf ".fonts"
+mkdir "fonts"
+unzip JetBrainsMono.zip -x "*Windows*" -d "fonts"
+cpdir "fonts" "$HOME/.local/share"
+fc-cache -f -v
+rm "JetBrainsMono.zip" && rm -rf "fonts"
 echo "Done"
 
 echo "Downloading and compiling polybar"
@@ -45,7 +45,9 @@ sudo make install
 echo "Done"
 
 echo "Installing neovim plugins"
-nvim --headless +PlugInstall +qa
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+nvim --headless +PackerInstall +qa
 echo "Done"
 
 echo "Import script finished"

@@ -44,10 +44,14 @@ make -j$(nproc)
 sudo make install
 echo "Done"
 
+echo "Install i3-gaps... again..."
+sudo apt install -y i3-gaps
+echo "Done"
+
 echo "Installing neovim plugins"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-nvim --headless +PackerInstall +qa
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerInstall'
 echo "Done"
 
 echo "Import script finished"

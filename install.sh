@@ -23,6 +23,7 @@ echo "Copying files to $HOME"
 cpdir ".local" "$HOME"
 cpdir ".config" "$HOME"
 cp "tmux.conf" "$HOME"
+cp "assets/metroid.jpg" "$HOME/Pictures"
 echo "Done"
 
 echo "Downloading and copying JetBrains Mono to $HOME/.local/share/fonts"

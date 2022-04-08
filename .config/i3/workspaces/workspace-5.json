@@ -1,0 +1,43 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1024,
+       "width": 573,
+       "x": 2685,
+       "y": 44
+    },
+    "marks": [],
+    "name": "Evolution",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Evolution$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1024,
+       "width": 942,
+       "x": 2886,
+       "y": 44
+    },
+    "marks": [],
+    "name": "Slack",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Slack$"
+       }
+    ],
+    "type": "con"
+}
+

@@ -37,6 +37,9 @@ require('nvim-tree').setup {
   update_cwd = true,
   view = { width = 32 },
   actions = {
+        open_file = {
+            resize_window = true
+        },
     change_dir = { enable = false },
   },
   update_focused_file = {

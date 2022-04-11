@@ -26,9 +26,7 @@ cpdir "$HOME/.local/share/rofi" "$PWD/.local/share"
 cpdir "$HOME/.config/polybar" "$PWD/.config"
 
 # call git commit and push
-git config --global user.email "hvernet93@gmail.com"
-git config --global user.name "vmhea"
 git remote set-url origin git@github.com:vmhea/dots.git
 git add -A
-git commit -a --allow-empty-message
+git commit -a -m "Automated update via commit script"
 git push

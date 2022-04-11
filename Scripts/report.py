@@ -17,3 +17,10 @@ report = report_string[:-1]                         # remove last linebreak char
 
 pyperclip.copy(report)
 #pyperclip.paste(report)
+
+
+# to do
+# check line for "### $DATE" and quit script if date isn't found
+# scrape hog web form and send button
+# send input to form and submit html request
+# setup cronjob to perform at specified time every working day

@@ -4,7 +4,7 @@ cpdir() {
     mkdir -p "$2" && cp "$1" "$2"
 }
 
-apps="neovim alacritty i3-gaps feh rofi picom"
+apps="neovim alacritty i3-gaps feh rofi picom xclip"
 repos=("ppa:neovim-ppa/stable" "ppa:aslatter/ppa" "ppa:regolith-linux/release")
 
 echo "Import script started"

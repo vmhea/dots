@@ -43,11 +43,11 @@
 * RAM is volatile memory, its contents are lost when the device is powered off
 
 * The VLAN Database
-    a. On a switch, the VLAN database (vlan.dat) is saved in either Flash or NVRAM, depending on the model of switch
+    1. On a switch, the VLAN database (vlan.dat) is saved in either Flash or NVRAM, depending on the model of switch
 
 * Booting from TFTP
-    a. The system can also load a system image and/or startup-config from an external TFTP server instead of Flash/NVRAM
-    b. This is not recommended because the device will not be able to boot if it loses connectivity to the server. It is usually only used where the device does not have enough capacity in Flash to save the system image
+    1. The system can also load a system image and/or startup-config from an external TFTP server instead of Flash/NVRAM
+    2. This is not recommended because the device will not be able to boot if it loses connectivity to the server. It is usually only used where the device does not have enough capacity in Flash to save the system image
 
 
 ### Factory Reset and Password Recovery

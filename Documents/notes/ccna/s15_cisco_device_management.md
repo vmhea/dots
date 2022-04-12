@@ -16,7 +16,7 @@
     2. Load bootstrap
 * The bootstrap will look in Flash for an IOS software image to load
 
-##### ROM Monitor - rommon
+#### ROMMON - ROM Monitor
 * If an IOS image cannot be found the device will show the ROMMON prompt at the command line
 * The ROM Monitor can be used to recover a missing or corrupted software image
 * In this case you can boot from USB or an external TFTP server

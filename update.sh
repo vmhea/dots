@@ -15,6 +15,10 @@ cpdir "$HOME/.local/share/rofi" "$PWD/.local/share"
 cpdir "$HOME/.config/polybar" "$PWD/.config"            # polybar
 echo "Copied dot files from $HOME to $PWD"
 
+# copy notes
+cpdir "$HOME/Documents/notes" "$PWD/Documents"
+echo "Copied notes from $HOME to $PWD"
+
 # call git commit and push
 git remote set-url origin git@github.com:vmhea/dots.git
 git add -A

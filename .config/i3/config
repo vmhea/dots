@@ -179,6 +179,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        position top
 }
 
 # vmware copy paste
@@ -193,3 +194,6 @@ for_window [class=".*"] border pixel 0
 
 # picom
 exec_always --no-startup-id picom --experimental-backends
+
+# unclutter
+exec --no-startup-id unclutter -idle 3

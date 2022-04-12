@@ -70,7 +70,7 @@
 * 0x2142: ignore contents of NVRAM (startup-config)
 
 #### Router Password Recovery Procedure
-**Keep existing config while only changing enable secret**
+*Keep existing config while only changing enable secret*
 
 * Press the break sequence (<C-Break>) at power on to break into rommon prompt
 * `confreg 0x2142` to ignore the startup-config on boot

@@ -1,10 +1,10 @@
 # Cisco Device Management
 
 
-## The Boot Up Process
+### The Boot Up Process
 ----------------------
 
-### Cisco Device Memory
+#### Cisco Device Memory
 * ROM - Read Only Memory
 * Flash
 * NVRAM - Non-Volatile RAM
@@ -17,7 +17,7 @@
     2. Load bootstrap
 * The bootstrap will look in Flash for an IOS software image to load
 
-###### ROM Monitor - rommon
+##### ROM Monitor - rommon
 * If an IOS image cannot be found the device will show the ROMMON prompt at the command line
 * The ROM Monitor can be used to recover a missing or corrupted software image
 * In this case you can boot from USB or an external TFTP server
@@ -51,16 +51,16 @@
     b. This is not recommended because the device will not be able to boot if it loses connectivity to the server. It is usually only used where the device does not have enough capacity in Flash to save the system image
 
 
-## Factory Reset and Password Recovery
+### Factory Reset and Password Recovery
 --------------------------------------
 
-### Factory Reset
+#### Factory Reset
 * To factory reset a router or switch: `write erase`
 * This will erase the startup-config
 * `reload` to boot up with a blank configuration
 * The Setup Wizard will run
 
-### The Config Register
+#### The Config Register
 * The configuration register can be used to change the way the router boots
 * Use the `config-register` command in global configuration mode or `confreg` at the ROMMON prompt
 * Eg `config-register 0x2142`
@@ -69,7 +69,7 @@
 * 0x2120: boot into rommon
 * 0x2142: ignore contents of NVRAM (startup-config)
 
-### Router Password Recovery Procedure
+#### Router Password Recovery Procedure
 **Keep existing config while only changing enable secret**
 
 * Press the break sequence (<C-Break>) at power on to break into rommon prompt
@@ -85,12 +85,12 @@
 * `config-register 0x2102` so the router will boot normally on the next restart
 * `copy run start` short for `copy running-cofig startup-config` to save the configuration. This will merge the new enable password into the existing startup-config
 
-### Switch Password Recovery Procedure
+#### Switch Password Recovery Procedure
 * The switch password recovery procedure is very similar, but you may have to physically press the `Mode` button on the front of the switch to break into the switch loader
 * Search for 'Cisco password recovery' for your model of switch for full instructions
 
 
-## Backing up the System Image and Config
+### Backing up the System Image and Config
 -----------------------------------------
 
 * Copies of the device's IOS system image and configuration can be saved to Flash, FTP, TFTP, or USB
@@ -104,7 +104,7 @@
     ```
 
 
-## Upgrading the IOS System Image
+### Upgrading the IOS System Image
 ---------------------------------
 
 * IOS software images can be downloaded from: `https://software.cisco.com`

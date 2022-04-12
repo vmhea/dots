@@ -2,8 +2,7 @@
 
 
 ### The Boot Up Process
-----------------------
-
+-----------------------
 #### Cisco Device Memory
 * ROM - Read Only Memory
 * Flash
@@ -52,8 +51,7 @@
 
 
 ### Factory Reset and Password Recovery
---------------------------------------
-
+---------------------------------------
 #### Factory Reset
 * To factory reset a router or switch: `write erase`
 * This will erase the startup-config
@@ -91,8 +89,7 @@
 
 
 ### Backing up the System Image and Config
------------------------------------------
-
+------------------------------------------
 * Copies of the device's IOS system image and configuration can be saved to Flash, FTP, TFTP, or USB
 * If you copy a config file into the running-config, it will be merged with the current configuration
 * To replace a configuration, factory reset and then copy the new configuration into the startup-config
@@ -105,8 +102,7 @@
 
 
 ### Upgrading the IOS System Image
----------------------------------
-
+----------------------------------
 * IOS software images can be downloaded from: `https://software.cisco.com`
 * After downloading the software, copy to the device's Flash using TFTP: `copy tftp flash`
 * Delete the old system image or use the `boot system` command

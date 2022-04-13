@@ -10,10 +10,6 @@ local opt = vim.opt         		      -- Set options (global/buffer/windows-scoped
 --local fn = vim.fn       				    -- Call Vim functions
 
 vim.cmd[[colorscheme catppuccin]] -- Set theme to catppuccin
-vim.cmd[[
-    highlight NvimTreeVertSplit guifg=#1A1826
-    highlight NvimTreeVertSplit guibg=#1A1826
-]]
 
 -- General
 opt.mouse = 'a'                       -- Enable mouse support

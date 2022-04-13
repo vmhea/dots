@@ -4,8 +4,8 @@
     "current_border_width": 0,
     "floating": "auto_off",
     "geometry": {
-       "height": 1056,
-       "width": 942,
+       "height": 947,
+       "width": 1280,
        "x": 0,
        "y": 0
     },
@@ -14,10 +14,10 @@
     "percent": 1,
     "swallows": [
        {
-        "class": "^firefox\\-beta$",
+        "class": "^firefox$",
        // "instance": "^Navigator$",
-       // "title": "^Mozilla\\ Firefox$",
-        "window_role": "^browser$"
+       "title": "^Mozilla\\ Firefox$",
+       "window_role": "^browser$"
        }
     ],
     "type": "con"

@@ -4,6 +4,7 @@ font:
     family: JetBrainsMono Nerd Font
   size: 11
 
+# nightfox theme
 colors:
   # Default colors
   primary:

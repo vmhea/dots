@@ -1,6 +1,6 @@
 return require('packer').startup(function()
   -- packer
-  use'wbthomason/packer.nvim'
+  use('wbthomason/packer.nvim'
 
   -- nvim-web-devicons
   use'kyazdani42/nvim-web-devicons'
@@ -55,5 +55,4 @@ return require('packer').startup(function()
     },
   }
 
-end
-)
+end)

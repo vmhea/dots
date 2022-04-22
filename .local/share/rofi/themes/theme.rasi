@@ -1,0 +1,9 @@
+* {
+    bg-col:  #000000;
+    border-col: #FFFFFF;
+    selected-col: #333333;
+    fg-col: #666666;
+    fg-col2: #FFFFFF;
+    width: 600;
+}
+

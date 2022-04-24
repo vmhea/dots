@@ -4,7 +4,7 @@ cpdir() {
     mkdir -p "$2" && cp -r "$1" "$2"
 }
 
-apps="neovim alacritty feh picom i3 rofi polybar maim xclip ripgrep fd-find unclutter-xfixes npm"
+apps="neovim alacritty feh picom i3 rofi polybar maim xclip ripgrep fd-find unclutter-xfixes npm tree"
 repos=("mozillateam/ppa" "neovim-ppa/unstable" "aslatter/ppa")
 lsps="npm bash-language-server vscode-langservers-extracted"
 

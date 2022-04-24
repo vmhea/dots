@@ -10,8 +10,8 @@ font pango:JetBrainsMono Nerd Font 8
 for_window [class=".*"] border pixel 0
 
 # i3 gaps
-gaps inner 12
-gaps outer 0
+# gaps inner 12
+# gaps outer 0
 
 
 # Declare variables and assign keys
@@ -95,10 +95,11 @@ bindsym $mod+Shift+space floating toggle
 # session management
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
+bindsym $mod+x exec i3lock -c 000000 lock
 
 # rofi menus
+bindsym Mod1+d exec "rofi -modi drun,run -show drun"
 bindsym $mod+Shift+e exec "rofi -show power-menu -modi 'power-menu:rofi-power-menu --choices=lockscreen/logout/reboot/shutdown'"
-bindsym $mod+x exec i3lock -c 000000 lock
 
 # resize window
 mode "resize" {
@@ -165,7 +166,7 @@ bindsym $mod+Shift+s exec --no-startup-id "maim | xclip -selection clipboard -t 
 
 # display applications
 exec_always --no-startup-id picom --experimental-backends
-exec_always --no-startup-id "polybar-msg cmd quit | polybar mybar"
+exec_always --no-startup-id "polybar-msg cmd quit | polybar -c '$HOME/.config/polybar/config.ini' mybar"
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpapers/zelda.jpg
 
 # tray applications
@@ -176,5 +177,3 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork -c 000000
 exec --no-startup-id vmware-user-suid-wrapper
 exec --no-startup-id unclutter -idle 2
-# use unclutter fix
-# sudo apt install unclutter-xfixes

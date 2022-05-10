@@ -33,15 +33,23 @@ return require('packer').startup(function()
   use'famiu/bufdelete.nvim'
 
   -- nvim-autopairs
-  use {
-    'windwp/nvim-autopairs',
-    config = function()
-      require('nvim-autopairs').setup()
-    end
-  }
+  use'windwp/nvim-autopairs'
 
   -- nvim-lspconfig
-  use'neovim/nvim-lspconfig'
+use {
+    "williamboman/nvim-lsp-installer",
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require("nvim-lsp-installer").setup {}
+            local lspconfig = require("lspconfig")
+            lspconfig.sumneko_lua.setup {}
+            lspconfig.bashls.setup {}
+            lspconfig.pyright.setup {}
+            lspconfig.prosemd_lsp.setup {}
+        end
+    }
+}
 
   -- nvim-cmp
   use {

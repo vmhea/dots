@@ -23,6 +23,9 @@ opt.linebreak = true                        -- Wrap on word boundary
 opt.showmatch = true                        -- Highlight matching brace, block, and parenthesis
 opt.termguicolors = true                    -- Enable 24-bit RGB colors
 opt.splitright = true
+opt.list = true
+opt.listchars:append("space:⋅")
+opt.listchars:append("eol:↴")
 
 --[[ vim.opt.fillchars = {                       -- Fill characters
     vert = " ",
@@ -54,8 +57,8 @@ opt.smartcase = true                        -- Set case sensitive if search star
 
 -- Whitespace
 opt.expandtab = true                        -- Use spaces instead of tabs
-opt.shiftwidth = 2                          -- Shift 2 spaces when tab
-opt.tabstop = 2                             -- Tab length 2 spaces
+opt.shiftwidth = 4                          -- Shift 2 spaces when tab
+opt.tabstop = 4                             -- Tab length 2 spaces
 opt.smartindent = true                      -- Auto indent new lines
 
 -- Startup
